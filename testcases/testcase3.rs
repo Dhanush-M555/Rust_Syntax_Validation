@@ -2,7 +2,7 @@ fn main() {
     static number:i32=10;
     let mut factorialwhile = 1;
     let mut counterwhile = factorialwhile;
-    while counterwhile <= number {
+    while counterwhile <= number+3 {
         factorialwhile *= counterwhile;
         counterwhile += 1;
     }

@@ -9,6 +9,7 @@ fn main()
         loop
         {
             innersum+=((5+i)* variable1 + variable2/10)%7;
+            break;
         }
     }
     let mut array1:[i64;100];

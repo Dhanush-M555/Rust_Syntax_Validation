@@ -73,13 +73,22 @@ def p_conditionsp(p):
                     | ID 
                     '''
 
+# def p_conditions(p):
+#     '''conditions : factor GT factor
+#                 | factor LT factor
+#                 | factor GTE factor
+#                 | factor LTE factor
+#                 | factor EQUAL factor
+#                 | factor NEQ factor
+#                 '''
+
 def p_conditions(p):
-    '''conditions : factor GT factor
-                | factor LT factor
-                | factor GTE factor
-                | factor LTE factor
-                | factor EQUAL factor
-                | factor NEQ factor
+    '''conditions : exp GT exp
+                | exp LT exp
+                | exp GTE exp
+                | exp LTE exp
+                | exp EQUAL exp
+                | exp NEQ exp
                 '''
 
 def p_expression(p):
