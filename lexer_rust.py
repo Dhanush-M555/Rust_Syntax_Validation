@@ -1,7 +1,24 @@
 import ply.lex as lex
 
-# List of token names
 tokens = (
+    'NOT',
+    'BREAK',
+    'FN',
+    'MAIN',
+    'LSQRBRACE',
+    'RSQRBRACE',
+    'CHARS',
+    'BYTES',
+    'STEPBY',
+    'ITER',
+    'STATIC',
+    'IN',
+    'LEN',
+    'ENUMERATE',
+    'DOTDOT',
+    'DOTDOTEQ',     
+    'DOT',
+    'FOR',
     'TRUE',
     'LOOP',
     'FALSE',
@@ -38,6 +55,25 @@ tokens = (
     'COMMA'
 )
 
+# t_LSQRBRACE=r'['
+# t_RSQRBRACE=r']'
+t_BREAK=r'break'
+t_NOT=r'!'
+t_FN=r'fn'
+t_MAIN=r'main'
+t_LSQRBRACE = r'\['
+t_RSQRBRACE = r'\]'
+t_STATIC=r'static'
+t_CHARS=r'chars'
+t_LEN=r'len'
+t_BYTES=r'bytes'
+t_FOR=r'for'
+t_IN=r'in'
+t_ENUMERATE=r'enumerate'
+t_STEPBY=r'step_by'
+t_DOT = r'\.'
+t_DOTDOT = r'\.\.'
+t_DOTDOTEQ = r'\.\.='
 t_LPAREN = r'\('
 t_RPAREN = r'\)'
 t_ASSIGN = r'='
@@ -67,7 +103,7 @@ t_SEMICOLON = r';'
 t_COLON = r':'
 t_MUT = r'mut'
 t_LET = r'let'
-t_TYPE = r'i32|i64|f32|f64|bool|char'
+t_TYPE = r'i32|i64|u8|u16|u32|u64|f32|f64|char|bool'
 t_WHILE=r'while'
 t_LOOP=r'loop'
 def t_ID(t):
@@ -99,8 +135,24 @@ reserved = {
     'while':'WHILE',
     'true':'TRUE',
     'false':'FALSE',
-    'loop':'LOOP'
+    'loop':'LOOP',
+    'u8':'TYPE',
+    'u16':'TYPE',
+    'u32':'TYPE',
+    'u64':'TYPE',
+    'in':'IN',
+    'for':'FOR',
+    'static':'STATIC',
+    'chars':'CHARS',
+    'iter':'ITER',
+    'enumerate':'ENUMERATE',
+    'len':'LEN',
+    'step_by':'STEPBY',
+    'fn':'FN',
+    'main':'MAIN',
+    'break':'BREAK'
 }
+
 
 def t_error(t):
     print(f"Illegal character '{t.value[0]}'")

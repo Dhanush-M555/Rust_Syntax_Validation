@@ -1,33 +1,17 @@
 from lexer_rust import lexer
 from parser_rust import parser,number_of_errors
 try:
-    with open("D:/college/AFLL/Rust/var_declaration/input.txt", "r") as file:
+    with open("D:/college/AFLL/Rust/Rust_Syntax_Validation/testcases/testcase3.txt", "r") as file:
         data = file.read()
     lexer.input(data)
     lexer.input(data)
     result = parser.parse(data, lexer=lexer)
-    if number_of_errors == 0:
-        print("Accepted")
+    try:
+        if number_of_errors == 0:
+            print("\033[92mAccepted \n NO SYNTAX ERROR!\033[0m")
+    except Exception as e:
+        print("\033[91;1mSyntax Error TRY AGAIN\033[0m")
 except FileNotFoundError:
-    print("File not found.")
+    print("\033[91;1mFile not found.\033[0m")
 except Exception as e:
-    print(f"An error occurred: {e}")
-
-
-# from lexer_rust import lexer
-# from parser_rust import parser
-
-# while True:
-#     try:
-#         data = input("Enter a Rust variable declaration:")
-#         lexer.input(data)
-        
-#         # Print tokens for debugging
-#         # for tok in lexer:
-#         #     print(tok)
-#         lexer.input(data)
-#         result = parser.parse(data, lexer=lexer)
-#         if result is not None:
-#             print("Accepted")
-#     except EOFError:
-#         break
+    print(f"\033[91;1mAn error occurred: {e}\033[0m")
