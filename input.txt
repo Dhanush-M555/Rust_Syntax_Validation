@@ -1,0 +1,11 @@
+let mut i:i32,b:char;
+while a>b && b>o 
+{
+    let ii;
+}
+loop{
+    let idli,vada;
+    i += le;
+    j+=6;
+}
+j=6+(i*i)/5;
