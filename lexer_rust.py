@@ -13,21 +13,21 @@ tokens = (
     'NEQ',
     'LBRACE',
     'RBRACE',
-    'ASSIGN',       # Assignment operator =
-    'ADD_ASSIGN',   # Addition assignment +=
-    'SUB_ASSIGN',   # Subtraction assignment -=
-    'MUL_ASSIGN',   # Multiplication assignment *=
-    'DIV_ASSIGN',   # Division assignment /=
-    'ADDITION',          # Addition operator +
-    'SUB',          # Subtraction operator -
-    'MUL',          # Multiplication operator *
-    'DIV',          # Division operator /
-    'MOD',          # Modulus operator %
+    'ASSIGN',
+    'ADD_ASSIGN',
+    'SUB_ASSIGN',
+    'MUL_ASSIGN',
+    'DIV_ASSIGN',
+    'ADDITION',
+    'SUB',
+    'MUL',
+    'DIV',
+    'MOD',
     'EQUAL',
     'GT',
     'LT',
     'LTE',
-    'LPAREN',       # Left parenthesis (
+    'LPAREN',
     'RPAREN',
     'GTE',
     'MUT',
