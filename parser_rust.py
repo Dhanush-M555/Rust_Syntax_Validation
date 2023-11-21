@@ -120,7 +120,7 @@ def p_var_list(p):
 
 
 def p_error(p):
-    print(f"\033[91;1mSyntax error at line {p.lineno}, position {p.lexpos}\033[0m")
+    print(f"\033[91;1m\n\nSyntax error at line {p.lineno}, position {p.lexpos}\033[0m\n\n")
     number_of_errors=number_of_errors+1
     # print(f"Syntax error")
 
